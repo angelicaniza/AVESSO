@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avesso • Crochê Contemporâneo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#fefee3', /* Soft cream background from logo */
+                        brandDark: '#121212',
+                        brandRed: '#8b0000',
+                        brandAccent: '#d97706'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fefee3;
+            color: #121212;
+            font-family: 'Inter', sans-serif;
+        }
+        .logo-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-brandBg text-brandDark antialiased selection:bg-brandRed selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brandDark text-brandBg py-2 px-4 text-center text-xs md:text-sm font-medium tracking-wide">
+        ✨ Produção 100% autoral e sob encomenda • Envie sua ideia via WhatsApp! 🧵
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-[#fefee3]/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo text / Visual simulation of logo -->
+            <a href="#" class="flex flex-col items-start group">
+                <div class="text-2xl md:text-3xl font-black tracking-tighter uppercase font-serif text-brandDark relative">
+                    AVESSO
+                    <span class="absolute -top-1 -right-2 w-2 h-2 rounded-full bg-brandRed animate-pulse"></span>
+                </div>
+                <span class="text-[10px] md:text-xs tracking-widest text-stone-600 lowercase font-medium">crochê contemporâneo</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-800">
+                <a href="#quem-somos" class="hover:text-brandRed transition-colors">Quem Somos</a>
+                <a href="#bolsa-maria" class="hover:text-brandRed transition-colors">Bolsa Maria</a>
+                <a href="#pochete-yuri" class="hover:text-brandRed transition-colors">Pochete Yuri</a>
+                <a href="#tapecaria" class="hover:text-brandRed transition-colors">Tapeçaria</a>
+                <a href="#encomendas" class="hover:text-brandRed transition-colors">Outras Encomendas</a>
+                <a href="#como-encomendar" class="hover:text-brandRed transition-colors">Como Encomendar</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/5534984035356?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20crochê%20na%20Avesso." target="_blank" class="bg-brandDark text-brandBg px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-brandRed transition-all duration-300 shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Encomendar
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-stone-800 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brandBg border-b border-stone-200 px-6 py-6 space-y-4 shadow-lg">
+            <a href="#quem-somos" class="block text-base font-medium text-stone-800 hover:text-brandRed mobile-link">Quem Somos</a>
+            <a href="#bolsa-maria" class="block text-base font-medium text-stone-800 hover:text-brandRed mobile-link">Bolsa Maria</a>
+            <a href="#pochete-yuri" class="block text-base font-medium text-stone-800 hover:text-brandRed mobile-link">Pochete Yuri</a>
+            <a href="#tapecaria" class="block text-base font-medium text-stone-800 hover:text-brandRed mobile-link">Tapeçaria</a>
+            <a href="#encomendas" class="block text-base font-medium text-stone-800 hover:text-brandRed mobile-link">Outras Encomendas</a>
+            <a href="#como-encomendar" class="block text-base font-medium text-stone-800 hover:text-brandRed mobile-link">Como Encomendar</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5534984035356?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20na%20Avesso." target="_blank" class="w-full bg-brandDark text-brandBg py-3 rounded-xl text-center font-medium block flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6 text-center md:text-left">
+            <span class="inline-block bg-stone-200/80 text-stone-800 text-xs font-semibold px-3 py-1.5 rounded-full tracking-wider uppercase">
+                Feito à mão • Exclusivo para você
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 leading-tight">
+                O lado direito mostra a beleza. <span class="text-brandRed italic">O avesso conta a história.</span>
+            </h1>
+            <p class="text-lg text-stone-700 max-w-xl mx-auto md:mx-0 font-light">
+                Bolsas, pochetes e tapeçaria em crochê contemporâneo criadas sob encomenda. Cada peça é um projeto único feito para durar e marcar presença.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                <a href="#como-encomendar" class="w-full sm:w-auto bg-brandRed text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-stone-900 transition-all duration-300 text-center">
+                    Quero Encomendar a Minha
+                </a>
+                <a href="#bolsa-maria" class="w-full sm:w-auto border border-stone-400 text-stone-900 px-8 py-4 rounded-full font-semibold hover:bg-stone-200 transition-all duration-300 text-center">
+                    Ver Catálogo
+                </a>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+            <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-stone-200 flex items-center justify-center">
+                <!-- Fallback / Representation of the Avatar/Logo Style -->
+                <img src="https://placehold.co/400x500/121212/fefee3?text=AVÉSSO+STUDIO" alt="Avesso Crochê" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+                    <p class="text-white text-sm font-medium tracking-wide">✨ Peças sob encomenda em Uberlândia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Somos Section -->
+    <section id="quem-somos" class="py-16 md:py-24 bg-white/60 border-y border-stone-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span class="text-brandRed text-sm font-semibold tracking-widest uppercase">Quem Somos</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900">
+                Muito além de pontos e nós
+            </h2>
+            <p class="text-base md:text-lg text-stone-700 leading-relaxed font-light">
+                A <strong>Avesso</strong> nasce da vontade de transformar o crochê tradicional em design contemporâneo. Acreditamos que a verdadeira beleza de uma peça artesanal está nos mínimos detalhes — no avesso limpo, na escolha rigorosa dos fios, na durabilidade e na identidade única que cada bolsa, pochete ou tapeçaria carrega. Aqui trabalhamos sob encomenda, respeitando o tempo do fazer manual e criando peças exclusivas que acompanham a sua rotina com muita personalidade.
+            </p>
+            <div class="pt-4 flex flex-wrap justify-center gap-8 text-stone-800 font-medium">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brandRed"></i> 100% Autoral</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brandRed"></i> Feito sob Encomenda</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brandRed"></i> Slow Fashion</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        
+        <div class="text-center space-y-3">
+            <span class="text-brandRed text-sm font-semibold tracking-widest uppercase">Coleção de Destaque</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900">Nossas Principais Peças</h2>
+            <p class="text-stone-600 max-w-xl mx-auto">Escolha seu modelo favorito e encomende nas suas cores de preferência.</p>
+        </div>
+
+        <!-- Bolsa Maria -->
+        <div id="bolsa-maria" class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200 flex flex-col lg:flex-row gap-10 items-center">
+            <div class="w-full lg:w-1/2 overflow-hidden rounded-2xl bg-stone-100 h-72 sm:h-96 relative">
+                <img src="https://placehold.co/600x400/e5e7eb/374151?text=Bolsa+Maria+(Em+breve)" alt="Bolsa Maria" class="w-full h-full object-cover">
+                <span class="absolute top-4 left-4 bg-brandDark text-brandBg text-xs font-semibold px-3 py-1 rounded-full">Exclusivo</span>
+            </div>
+            <div class="w-full lg:w-1/2 space-y-6">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-brandRed font-bold">Bolsas</span>
+                    <h3 class="text-3xl font-serif font-bold text-stone-900 mt-1">Bolsa Maria</h3>
+                </div>
+                <p class="text-stone-700 leading-relaxed">
+                    Elegante, estruturada e espaçosa. A Bolsa Maria é perfeita para o dia a dia agitado na cidade, unindo a leveza do crochê com a robustez e sofisticação que você precisa para carregar o essencial com muito estilo.
+                </p>
+                <ul class="space-y-2 text-sm text-stone-600">
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Cores personalizáveis sob consulta</li>
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Alça resistente e acabamento impecável</li>
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Produção artesanal sob encomenda</li>
+                </ul>
+                <div class="pt-2">
+                    <a href="https://wa.me/5534984035356?text=Olá!%20Gostaria%20de%20encomendar%20a%20Bolsa%20Maria." target="_blank" class="inline-flex items-center gap-2 bg-brandDark text-brandBg px-6 py-3 rounded-full font-semibold hover:bg-brandRed transition-colors">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Encomendar Bolsa Maria
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pochete Yuri -->
+        <div id="pochete-yuri" class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200 flex flex-col lg:flex-row-reverse gap-10 items-center">
+            <div class="w-full lg:w-1/2 overflow-hidden rounded-2xl bg-stone-100 h-72 sm:h-96 relative">
+                <img src="https://placehold.co/600x400/e5e7eb/374151?text=Pochete+Yuri+(Em+breve)" alt="Pochete Yuri" class="w-full h-full object-cover">
+                <span class="absolute top-4 left-4 bg-brandDark text-brandBg text-xs font-semibold px-3 py-1 rounded-full">Urbano & Prático</span>
+            </div>
+            <div class="w-full lg:w-1/2 space-y-6">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-brandRed font-bold">Acessórios</span>
+                    <h3 class="text-3xl font-serif font-bold text-stone-900 mt-1">Pochete Yuri</h3>
+                </div>
+                <p class="text-stone-700 leading-relaxed">
+                    Liberdade para as mãos e muito charme para o look. A Pochete Yuri redefine o conceito de acessório urbano, misturando o toque artesanal com uma modelagem moderna, segura e super versátil.
+                </p>
+                <ul class="space-y-2 text-sm text-stone-600">
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Versátil para usar na cintura ou na transversal</li>
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Fechamento seguro e trama firme</li>
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Feito sob medida para você</li>
+                </ul>
+                <div class="pt-2">
+                    <a href="https://wa.me/5534984035356?text=Olá!%20Gostaria%20de%20encomendar%20a%20Pochete%20Yuri." target="_blank" class="inline-flex items-center gap-2 bg-brandDark text-brandBg px-6 py-3 rounded-full font-semibold hover:bg-brandRed transition-colors">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Encomendar Pochete Yuri
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tapeçaria -->
+        <div id="tapecaria" class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200 flex flex-col lg:flex-row gap-10 items-center">
+            <div class="w-full lg:w-1/2 overflow-hidden rounded-2xl bg-stone-100 h-72 sm:h-96 relative">
+                <img src="https://placehold.co/600x400/e5e7eb/374151?text=Tapeçaria+(Em+breve)" alt="Tapeçaria" class="w-full h-full object-cover">
+                <span class="absolute top-4 left-4 bg-brandDark text-brandBg text-xs font-semibold px-3 py-1 rounded-full">Decoração</span>
+            </div>
+            <div class="w-full lg:w-1/2 space-y-6">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-brandRed font-bold">Décor</span>
+                    <h3 class="text-3xl font-serif font-bold text-stone-900 mt-1">Tapeçaria em Crochê</h3>
+                </div>
+                <p class="text-stone-700 leading-relaxed">
+                    Transforme suas paredes e ambientes em um espaço de aconchego e arte. Nossas peças de tapeçaria decorativa levam texturas exclusivas, cores harmoniosas e muita identidade para a sua casa.
+                </p>
+                <ul class="space-y-2 text-sm text-stone-600">
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Projetos personalizados para o seu espaço</li>
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Peças artísticas de parede e tapetes</li>
+                    <li><i class="fa-solid fa-circle-check text-brandRed mr-2"></i> Orçamento sob medida</li>
+                </ul>
+                <div class="pt-2">
+                    <a href="https://wa.me/5534984035356?text=Olá!%20Gostaria%20de%20encomendar%20uma%20peça%20de%20tapeçaria." target="_blank" class="inline-flex items-center gap-2 bg-brandDark text-brandBg px-6 py-3 rounded-full font-semibold hover:bg-brandRed transition-colors">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Encomendar Tapeçaria
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Encomendas Especiais Section -->
+    <section id="encomendas" class="py-16 md:py-24 bg-stone-900 text-brandBg">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <span class="text-brandRed text-sm font-semibold tracking-widest uppercase">Criatividade sem limites</span>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold">
+                Outras Encomendas & Roupas
+            </h2>
+            <p class="text-stone-300 max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed">
+                Tem uma ideia de roupa em crochê, acessório especial ou projeto personalizado em mente? Nós criamos junto com você! Envie sua inspiração ou referência e vamos tirar do papel.
+            </p>
+            <div class="pt-4">
+                <a href="https://wa.me/5534984035356?text=Olá!%20Gostaria%20de%20fazer%20uma%20encomenda%20especial%20de%20crochê." target="_blank" class="inline-flex items-center gap-3 bg-brandBg text-brandDark px-8 py-4 rounded-full font-bold hover:bg-brandRed hover:text-white transition-all duration-300 shadow-xl">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Conversar sobre Encomenda Especial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Encomendar Section -->
+    <section id="como-encomendar" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-3 mb-16">
+            <span class="text-brandRed text-sm font-semibold tracking-widest uppercase">Passo a Passo</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900">Como Funciona a Encomenda?</h2>
+            <p class="text-stone-600 max-w-xl mx-auto">Trabalhamos exclusivamente sob encomenda para garantir exclusividade e cuidado em cada peça.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-brandRed/10 text-brandRed font-bold flex items-center justify-center text-xl">1</div>
+                <h3 class="text-xl font-bold font-serif text-stone-900">Escolha ou Inspire-se</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Navegue pelos nossos modelos (Bolsa Maria, Pochete Yuri, Tapeçaria) ou traga a sua ideia de roupa e projeto em crochê.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-brandRed/10 text-brandRed font-bold flex items-center justify-center text-xl">2</div>
+                <h3 class="text-xl font-bold font-serif text-stone-900">Fale Conosco</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Entre em contato diretamente pelo nosso WhatsApp <strong>(34) 98403-5356</strong> ou via Instagram <strong>@avesso_crochee</strong> para definir cores e prazos.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-brandRed/10 text-brandRed font-bold flex items-center justify-center text-xl">3</div>
+                <h3 class="text-xl font-bold font-serif text-stone-900">Produção & Entrega</h3>
+                <p class="text-stone-600 text-sm leading-relaxed">
+                    Sua peça é confeccionada à mão com todo o cuidado no nosso estúdio em Uberlândia e enviada para você!
+                </p>
+            </div>
+        </div>
+
+        <!-- Direct Contact Banner -->
+        <div class="mt-16 bg-white border border-stone-200 rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div class="space-y-2 text-center md:text-left">
+                <h3 class="text-2xl font-serif font-bold text-stone-900">Pronta para encomendar a sua peça?</h3>
+                <p class="text-stone-600">Atendemos via WhatsApp e Instagram com todo o carinho.</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="https://wa.me/5534984035356?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20encomenda." target="_blank" class="bg-brandDark text-brandBg px-6 py-3.5 rounded-full font-semibold hover:bg-brandRed transition-colors flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> (34) 98403-5356
+                </a>
+                <a href="https://instagram.com/avesso_crochee" target="_blank" class="bg-stone-100 text-stone-900 border border-stone-300 px-6 py-3.5 rounded-full font-semibold hover:bg-stone-200 transition-colors flex items-center gap-2">
+                    <i class="fa-brands fa-instagram text-lg text-pink-600"></i> @avesso_crochee
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-brandBg py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <span class="text-2xl font-black tracking-tighter uppercase font-serif block">AVESSO</span>
+                <span class="text-xs tracking-widest text-stone-400">crochê contemporâneo</span>
+            </div>
+            <p class="text-xs text-stone-400">
+                O lado direito mostra a beleza, mas é o avesso quem conta a história. • Uberlândia-MG
+            </p>
+            <div class="flex items-center space-x-6">
+                <a href="https://instagram.com/avesso_crochee" target="_blank" class="text-stone-300 hover:text-white text-xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5534984035356" target="_blank" class="text-stone-300 hover:text-white text-xl"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
